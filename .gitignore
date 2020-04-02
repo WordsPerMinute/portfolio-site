@@ -1,0 +1,8 @@
+#Directories
+.well-known
+cgi-bin
+
+# HostGator files
+.htaccess
+.ftpquota
+default.html
