@@ -49,10 +49,22 @@ table {
 
 /* end reset */
 
+
+
+
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
 
 body {
+	font-size: 2rem;
 	background-color: black;
+	margin-top: .25em;
 	margin-left: .25em;
 }
 
@@ -84,7 +96,7 @@ dl {
 }
 
 dd {
-	margin-left: 1.5rem;
+	margin-left: 2.9rem;
 	margin-bottom: 1rem;
 }
 
@@ -103,7 +115,22 @@ a:hover {
 }
 
 img {
-	width: 15%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 25%;
+}
+
+p {
+	width: 880px;
+	margin-bottom: 10px;
+}
+
+.pre-description {
+	margin-bottom: 5px;
+}
+
+.body-text {
+	color: white;
 }
 
 /* START typewriter for TITLE */
@@ -111,7 +138,7 @@ img {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid transparent; /* The typwriter cursor */
   animation:
-    blink-caret-title .75s step-end 2;
+    blink-caret-title .5s step-end 2;
 }
 
 @keyframes blink-caret-title {
@@ -124,7 +151,7 @@ img {
 #all-my-links {
   visibility: invisible;
   opacity: 0;
-	animation: appear 2s ease-out 2s forwards;
+	animation: appear 1s ease-out 1.5s forwards;
 }
 @keyframes appear {
   to {
@@ -139,18 +166,7 @@ img {
   }
 }
 
-p {
-	width: 500px;
-	margin-bottom: 10px;
-}
 
-.pre-bio {
-	margin-bottom: 5px;
-}
-
-.body-text {
-	color: white;
-}
 /* END appear for BODY */
 
 /* footer {
