@@ -9,3 +9,6 @@ default.html
 
 # Git
 .gitignore
+
+#Other
+Resume.pdf

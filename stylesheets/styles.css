@@ -46,3 +46,96 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* end reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+
+body {
+	background-color: black;
+	margin-left: .25em;
+}
+
+h1 {
+	color: hsla(0, 0%, 100%, 1);
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+h1 > * {
+	color: hsla(0, 0%, 100%, 1);
+}
+
+* {
+	  font-family: 'Ubuntu Mono', monospace;
+		color: hsla(0, 0%, 70%, 1);
+}
+
+#username {
+	color: #8AE234;
+}
+
+#path {
+	color: #729FCF;
+}
+
+dl {
+	color: white;
+	margin-top: 1rem;
+}
+
+dd {
+	margin-left: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+	color: #729FCF;
+}
+
+a:hover {
+	color: #8AE234;
+}
+
+img {
+	width: 15%;
+}
+
+/* START typewriter for TITLE */
+#typewriter-title {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid transparent; /* The typwriter cursor */
+  animation:
+    blink-caret-title .75s step-end 3;
+}
+
+@keyframes blink-caret-title {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+/* END typewriter for TITLE */
+
+/* START appear for BODY */
+#all-my-links {
+  visibility: invisible;
+  opacity: 0;
+	animation: appear 2s ease-out 2.5s forwards;
+}
+@keyframes appear {
+  to {
+		visibility: visible;
+		opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  to {
+		visibility: visible;
+		opacity: 1;
+  }
+}
+/* END appear for BODY */
