@@ -111,7 +111,7 @@ img {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid transparent; /* The typwriter cursor */
   animation:
-    blink-caret-title .75s step-end 3;
+    blink-caret-title .75s step-end 2;
 }
 
 @keyframes blink-caret-title {
@@ -124,7 +124,7 @@ img {
 #all-my-links {
   visibility: invisible;
   opacity: 0;
-	animation: appear 2s ease-out 2.5s forwards;
+	animation: appear 2s ease-out 2s forwards;
 }
 @keyframes appear {
   to {
@@ -138,4 +138,36 @@ img {
 		opacity: 1;
   }
 }
+
+p {
+	width: 500px;
+	margin-bottom: 10px;
+}
+
+.pre-bio {
+	margin-bottom: 5px;
+}
+
+.body-text {
+	color: white;
+}
 /* END appear for BODY */
+
+/* footer {
+	font-size: 6px;
+	margin-top: 400px;
+}
+
+footer {
+	font-size: 6px;
+	margin-top: 400px;
+}
+
+footer {
+	font-size: 6px;
+	margin-top: 400px;
+}
+
+footer * {
+	color: hsla(0, 0%, 03%, 1) !important;
+} */
