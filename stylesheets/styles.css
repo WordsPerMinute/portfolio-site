@@ -97,7 +97,7 @@ body {
 #content-container {
 	display: flex;
 	flex-direction: column;
-	width: 500px;
+	width: 450px;
 }
 
 /* Text */
