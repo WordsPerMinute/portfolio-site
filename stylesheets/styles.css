@@ -51,6 +51,13 @@ table {
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Ubuntu+Mono&display=swap');
 
+:root {
+  --body-padding: 16px;
+	--body-font-size: 2rem;
+}
+
+
+
 /* The PATH Terminal style at the top */
 #username {
 	color: #8AE234;I have a passion for digital networks and how they help us share art, educational materials, and culture. I believe we should compassionately encourage each other to excel.
@@ -63,41 +70,37 @@ table {
 /* Setup entire page to be responsive */
 main, header, footer {
 	margin: 0;
-	padding: 15px;
+	padding: var(--body-padding);
 	border: 1px solid #000000;
 }
 
 body {
-	font-size: 2rem;
+	font-size: var(--body-font-size);
 	background-color: black;
 }
 
 .flex-container {
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 }
 
 .header-wrapper {
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
 }
 
 .main-wrapper {
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
-	/* max-width: 75rem; */
 }
 
 #content-container {
 	display: flex;
 	flex-direction: column;
-	/* justify-content: flex-start; */
-	/* align-items: flex-start; */
-	width: 800px;
+	width: 500px;
 }
+
+/* Text */
 
 h1 {
 	color: hsla(0, 0%, 100%, 1);
@@ -119,35 +122,26 @@ h2:not(:last-child) {
 h2::before {
 	content: '=>';
 	position: absolute;
-	left: 15px;
+	left: var(--body-padding);
 	color: hsla(0, 0%, 70%, 1);
 }
 
 * {
-	  font-family: 'Ubuntu Mono', monospace;
-		color: hsla(0, 0%, 70%, 1);
+	font-family: 'Ubuntu Mono', monospace;
+	color: hsla(0, 0%, 70%, 1);
 }
 
-p, dd {
-	  font-family: 'Ubuntu', sans-serif;
-		font-size: 1.75rem;
+p {
+  font-family: 'Ubuntu', sans-serif;
+	font-size: calc(var(--body-font-size) * .75);
 }
 
-/* p:not(:last-child) */
 p + p {
-    margin-top: .75em;
-}
-
-.body-text {
-	color: white;
+  margin-top: .75em;
 }
 
 .main-wrapper {
 	margin-left: 1.5em;
-}
-
-.arrow-container {
-	width: 200px;
 }
 
 .content-image {
@@ -157,10 +151,6 @@ p + p {
 	margin-bottom: 30px;
 }
 
-.description {
-	/* width: 880px; */
-	/* margin-bottom: 10px; */
-}
 
 /* Link styling */
 a:link, a:visited {
@@ -192,7 +182,7 @@ a:hover {
 /* END typewriter for TITLE */
 
 /* START appear for BODY */
-#content-container {
+.main-wrapper {
   visibility: invisible;
   opacity: 0;
 	animation: appear .5s ease-out .75s forwards;
@@ -228,12 +218,38 @@ footer {
 
 /* MEDIA QUERY START */
 
-@media screen and (max-width: 500px) {
-	h1 {
-		font-size: 4rem;
+
+@media screen and (max-width: 800px) {
+	#content-container {
+		width: 40vh;
 	}
-	p, dd, dt {
-		font-size: 3rem;
+
+@media screen and (max-width: 400px) {
+		#content-container {
+			width: 25vh;
+		}
+
+}
+
+@media screen and (max-width: 1000px) and (min-height: 1000px) {
+	#content-container {
+		width: 100%;
+	}
+	body {
+		font-size: calc(var(--body-font-size) * 2)
+	}
+	p {
+		font-size: calc(var(--body-font-size) * 1.75)
+	}
+	h2:not(:last-child) {
+		margin-bottom: 1.5em;
+	}
+	h2 + p {
+		margin-top: -1.5em;
+	}
+
+	.content-image {
+		width: 750px;
 	}
 
 }
