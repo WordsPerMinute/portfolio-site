@@ -49,23 +49,54 @@ table {
 
 /* end reset */
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Ubuntu+Mono&display=swap');
 
+/* The PATH Terminal style at the top */
+#username {
+	color: #8AE234;
+}
 
+#path {
+	color: #729FCF;
+}
 
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+/* Setup entire page to be responsive */
+main, header, footer {
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #000000;
+}
 
 body {
 	font-size: 2rem;
 	background-color: black;
-	margin-top: .25em;
-	margin-left: .25em;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+}
+
+.header-wrapper {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+}
+
+.main-wrapper {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	/* max-width: 75rem; */
+}
+
+#content-container {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: flex-start; */
+	/* align-items: flex-start; */
+	width: 800px;
 }
 
 h1 {
@@ -82,24 +113,53 @@ h1 > * {
 		color: hsla(0, 0%, 70%, 1);
 }
 
-#username {
-	color: #8AE234;
+p {
+	  font-family: 'Ubuntu', sans-serif;
 }
 
-#path {
-	color: #729FCF;
+.body-text {
+	color: white;
 }
 
 dl {
 	color: white;
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
+}
+
+#content-container dt {
+	margin-bottom: 10px;
 }
 
 dd {
-	margin-left: 2.9rem;
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 }
 
+.arrow-container {
+	width: 200px;
+}
+
+.content-image {
+	display: flex;
+	width: 250px;
+	margin-bottom: 30px;
+}
+
+.description {
+	/* width: 880px; */
+	/* margin-bottom: 10px; */
+}
+
+.content-description p {
+	margin-bottom: 20px;
+}
+
+.pre-description {
+	/* margin-bottom: 5px; */
+}
+
+
+
+/* Link styling */
 a:link, a:visited {
 	color: white;
 	text-decoration: none;
@@ -112,29 +172,6 @@ a:active {
 
 a:hover {
 	color: #8AE234;
-}
-
-img {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 25%;
-}
-
-.description {
-	width: 880px;
-	margin-bottom: 10px;
-}
-
-.description p {
-	margin-bottom: 10px;
-}
-
-.pre-description {
-	margin-bottom: 5px;
-}
-
-.body-text {
-	color: white;
 }
 
 /* START typewriter for TITLE */
@@ -152,7 +189,7 @@ img {
 /* END typewriter for TITLE */
 
 /* START appear for BODY */
-#all-my-links {
+#content-container {
   visibility: invisible;
   opacity: 0;
 	animation: appear .5s ease-out .75s forwards;
@@ -173,21 +210,23 @@ img {
 
 /* END appear for BODY */
 
-/* footer {
-	font-size: 6px;
-	margin-top: 400px;
+/* FOOTER START */
+#no-copy {
+	width: 6px;
 }
 
 footer {
-	font-size: 6px;
-	margin-top: 400px;
+	font-size: .5rem;
 }
 
-footer {
-	font-size: 6px;
-	margin-top: 400px;
+.footer-text {
+	color: hsla(360, 100%, 0%, 0.5);
 }
 
-footer * {
-	color: hsla(0, 0%, 03%, 1) !important;
-} */
+/* MEDIA QUERY START */
+
+@media screen and (min-width: 640px){
+    /* .flex-container {
+        display: flex;
+    }     */
+}
