@@ -53,7 +53,7 @@ table {
 
 /* The PATH Terminal style at the top */
 #username {
-	color: #8AE234;
+	color: #8AE234;I have a passion for digital networks and how they help us share art, educational materials, and culture. I believe we should compassionately encourage each other to excel.
 }
 
 #path {
@@ -108,6 +108,21 @@ h1 > * {
 	color: hsla(0, 0%, 100%, 1);
 }
 
+h2 {
+	color: hsla(0, 0%, 100%, 1);
+}
+
+h2:not(:last-child) {
+	margin-bottom: .5em;
+}
+
+h2::before {
+	content: '=>';
+	position: absolute;
+	left: 15px;
+	color: hsla(0, 0%, 70%, 1);
+}
+
 * {
 	  font-family: 'Ubuntu Mono', monospace;
 		color: hsla(0, 0%, 70%, 1);
@@ -118,25 +133,17 @@ p, dd {
 		font-size: 1.75rem;
 }
 
-p:not(:last-child) {
-    margin-bottom: 15px;
+/* p:not(:last-child) */
+p + p {
+    margin-top: .75em;
 }
 
 .body-text {
 	color: white;
 }
 
-dl {
-	color: white;
-	/* margin-top: 1rem; */
-}
-
-#content-container dt {
-	margin-bottom: 15px;
-}
-
-dd {
-	/* margin-bottom: 1rem; */
+.main-wrapper {
+	margin-left: 1.5em;
 }
 
 .arrow-container {
@@ -154,12 +161,6 @@ dd {
 	/* width: 880px; */
 	/* margin-bottom: 10px; */
 }
-
-.pre-description {
-	/* margin-bottom: 5px; */
-}
-
-
 
 /* Link styling */
 a:link, a:visited {
@@ -227,8 +228,12 @@ footer {
 
 /* MEDIA QUERY START */
 
-@media screen and (min-width: 640px){
-    /* .flex-container {
-        display: flex;
-    }     */
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 4rem;
+	}
+	p, dd, dt {
+		font-size: 3rem;
+	}
+
 }
