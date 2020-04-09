@@ -113,8 +113,13 @@ h1 > * {
 		color: hsla(0, 0%, 70%, 1);
 }
 
-p {
+p, dd {
 	  font-family: 'Ubuntu', sans-serif;
+		font-size: 1.75rem;
+}
+
+p:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .body-text {
@@ -141,16 +146,13 @@ dd {
 .content-image {
 	display: flex;
 	width: 250px;
+	margin-top: 20px;
 	margin-bottom: 30px;
 }
 
 .description {
 	/* width: 880px; */
 	/* margin-bottom: 10px; */
-}
-
-.content-description p {
-	margin-bottom: 20px;
 }
 
 .pre-description {
