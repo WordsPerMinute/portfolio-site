@@ -1,6 +1,8 @@
 # Directories
 .well-known
 cgi-bin
+u
+assets
 
 # HostGator files
 .htaccess

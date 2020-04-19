@@ -151,6 +151,12 @@ p + p {
 	margin-bottom: 30px;
 }
 
+.content-video {
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
 
 /* Link styling */
 a:link, a:visited {
