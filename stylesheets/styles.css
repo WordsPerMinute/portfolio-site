@@ -113,7 +113,7 @@ h1 > * {
 }
 
 h2 {
-	color: hsla(0, 0%, 100%, 1);
+	color: #839496;
 }
 
 h2:not(:last-child) {
@@ -129,7 +129,7 @@ h2::before {
 
 * {
 	font-family: 'Ubuntu Mono', monospace;
-	color: hsla(0, 0%, 70%, 1);
+	color: #839496;
 }
 
 p {
@@ -226,38 +226,38 @@ footer {
 
 /* MEDIA QUERY START */
 
-
-@media screen and (max-width: 800px) {
-	#content-container {
-		width: 40vh;
-	}
-
-@media screen and (max-width: 400px) {
-		#content-container {
-			width: 25vh;
-		}
-
-}
-
-@media screen and (max-width: 1000px) and (min-height: 1000px) {
-	#content-container {
-		width: 100%;
-	}
-	body {
-		font-size: calc(var(--body-font-size) * 2)
-	}
-	p {
-		font-size: calc(var(--body-font-size) * 1.75)
-	}
-	h2:not(:last-child) {
-		margin-bottom: 1.5em;
-	}
-	h2 + p {
-		margin-top: -1.5em;
-	}
-
-	.content-image {
-		width: 750px;
-	}
-
-}
+// @media (max-width: 400px) {
+// 		#content-container {
+// 			width: 25vh;
+// 		}
+//
+// }
+//
+// @media (max-width: 800px) {
+// 	#content-container {
+// 		width: 40vh;
+// 	}
+//
+//
+// @media (max-width: 1050px) {
+// 	#content-container {
+// 		width: 100%;
+// 	}
+// 	body {
+// 		font-size: calc(var(--body-font-size) * 2)
+// 	}
+// 	p {
+// 		font-size: calc(var(--body-font-size) * 1.75)
+// 	}
+// 	h2:not(:last-child) {
+// 		margin-bottom: 1.5em;
+// 	}
+// 	h2 + p {
+// 		margin-top: -1.5em;
+// 	}
+//
+// 	.content-image {
+// 		width: 750px;
+// 	}
+//
+// }
