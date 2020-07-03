@@ -147,7 +147,7 @@ p + p {
 
 .content-image {
 	display: flex;
-	width: 250px;
+	width: 560px;
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
@@ -180,7 +180,7 @@ a:hover {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid transparent; /* The typwriter cursor */
   animation:
-    blink-caret-title .25s step-end 2;
+    blink-caret-title .20s step-end 2;
 }
 
 @keyframes blink-caret-title {
@@ -193,7 +193,7 @@ a:hover {
 .main-wrapper {
   visibility: invisible;
   opacity: 0;
-	animation: appear .5s ease-out .75s forwards;
+	animation: appear .5s ease-out .50s forwards;
 }
 @keyframes appear {
   to {
