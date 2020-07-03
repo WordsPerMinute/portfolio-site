@@ -60,7 +60,7 @@ table {
 
 /* The PATH Terminal style at the top */
 #username {
-	color: ##839496;
+	color: #8AE234;I have a passion for digital networks and how they help us share art, educational materials, and culture. I believe we should compassionately encourage each other to excel.
 }
 
 #path {
@@ -71,12 +71,12 @@ table {
 main, header, footer {
 	margin: 0;
 	padding: var(--body-padding);
-	border: 0px solid #000000;
+	border: 1px solid #000000;
 }
 
 body {
 	font-size: var(--body-font-size);
-	background-color: #073642;
+	background-color: black;
 }
 
 .flex-container {
@@ -103,13 +103,12 @@ body {
 /* Text */
 
 h1 {
-	/* the : and $ are affected by this */
-	color: #839496;
+	color: hsla(0, 0%, 100%, 1);
   font-family: 'Ubuntu Mono', monospace;
 }
 
 h1 > * {
-	color: #cb4b16;
+	color: hsla(0, 0%, 100%, 1);
 }
 
 h2 {
@@ -124,7 +123,7 @@ h2::before {
 	content: '=>';
 	position: absolute;
 	left: var(--body-padding);
-	color: #839496;
+	color: hsla(0, 0%, 70%, 1);
 }
 
 * {
@@ -161,7 +160,7 @@ p + p {
 
 /* Link styling */
 a:link, a:visited {
-	color: #839496;
+	color: white;
 	text-decoration: none;
 }
 
@@ -176,7 +175,6 @@ a:hover {
 
 /* START typewriter for TITLE */
 #typewriter-title {
-	color: #839496;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid transparent; /* The typwriter cursor */
   animation:
@@ -185,7 +183,7 @@ a:hover {
 
 @keyframes blink-caret-title {
   from, to { border-color: transparent }
-  50% { border-color: #839496; }
+  50% { border-color: white; }
 }
 /* END typewriter for TITLE */
 
@@ -221,7 +219,7 @@ footer {
 }
 
 .footer-text {
-	color: #073642;
+	color: hsla(360, 100%, 0%, 0.5);
 }
 
 /* MEDIA QUERY START */
