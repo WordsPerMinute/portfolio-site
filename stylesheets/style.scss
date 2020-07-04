@@ -77,11 +77,14 @@ h1 {
 	font-size: $font-xxxl;
 	color: #839496;
   font-family: $title-font;
-		min-width: 800px;
+	min-width: 800px;
 	@media (max-width: $medium-breakpoint) {
-		font-size: $font-xxl;
+		font-size: $font-xl;
+		min-width: 550px;
 	}
 	@media (max-width: $small-breakpoint) {
+		font-size: $font-xs;
+		min-width: 350px;
 	}
 }
 
@@ -100,6 +103,9 @@ h2 {
 	font-size: $font-xxl;
 	margin-left: $large;
 	margin-top: $xl;
+	@media (max-width: $medium-breakpoint) {
+		font-size: $font-xxl;
+	}
 }
 
 .project-page h2:not(:first-child), .project-page-return {
@@ -125,19 +131,12 @@ p {
 	font-size: $font-xl;
 	line-height: 1.75;
 	margin-top: $small;
-		color: #839496;
-}
-
-@media (max-width: $small-breakpoint) {
-	// p {
-	// 	font-size: $font-xl;
-	// }
-}
-
-@media (max-width: $medium-breakpoint) {
-	// p {
-	// 	font-size: $font-xl;
-	// }
+	color: #839496;
+	@media (max-width: $medium-breakpoint) {
+	}
+	@media (max-width: $small-breakpoint) {
+	font-size: $font-baseline;
+	}
 }
 
 p + p {
@@ -152,9 +151,7 @@ p + p {
 	width: 560px;
 	margin-top: $small;
 	@media (max-width: $medium-breakpoint) {
-		// .content-image {
-		// 	width: 750px;
-		// }
+			width: 75%;
 	}
 }
 
@@ -169,13 +166,18 @@ p + p {
 	}
 }
 
+@media (max-width: $medium-breakpoint) {
+	iframe {
+		width: 75%;
+	}
+}
+
 .bio-image {
 	width: 400px;
 	margin-top: $small;
-	@media (max-width: $medium-breakpoint) {
-		// .content-image {
-		// 	width: 750px;
-		// }
+	@media (max-width: $small-breakpoint) {
+	width: 75%;
+	margin-top: $large;
 	}
 }
 
