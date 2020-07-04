@@ -20,20 +20,19 @@
 }
 
 main, header, footer {
-	margin: 0;
-	padding: $baseline;
 	border: 0px solid #000000;
 }
 
-body {
-	font-size: $font-xxl;
-	background-color: #073642;
+header {
+	margin: $xl $baseline 0;
 }
 
-@media (max-width: $medium-breakpoint) {
-	body {
-		font-size: $font-xxxxl;
-	}
+main {
+	margin: 0 $baseline;
+}
+
+body {
+	background-color: #073642;
 }
 
 .body-wrapper {
@@ -47,12 +46,8 @@ body {
   align-items: flex-start;
 }
 
-h1 {
-	min-width: 800px;
-}
-
 .main-wrapper {
-	max-width: 700px;
+	max-width: 800px;
 }
 
 // .header-wrapper {
@@ -79,25 +74,40 @@ h1 {
 /* Text */
 h1 {
 	/* the : and $ are affected by this */
+	font-size: $font-xxxl;
 	color: #839496;
   font-family: $title-font;
-}
-
-@media (max-width: $small-breakpoint) {
-
+		min-width: 800px;
+	@media (max-width: $medium-breakpoint) {
+		font-size: $font-xxl;
+	}
+	@media (max-width: $small-breakpoint) {
+	}
 }
 
 h1 > * {
+	font-family: 'Ubuntu Mono', monospace;
 	color: #cb4b16;
 }
 
-h2 {
-	margin-left: $large;
-	color: #839496;
+h1 {
+		color: #839496;
 }
 
-h2:not(:last-child) {
-	margin-bottom: $xs;
+h2 {
+	font-family: 'Ubuntu Mono', monospace;
+	color: #839496;
+	font-size: $font-xxl;
+	margin-left: $large;
+	margin-top: $xl;
+}
+
+.project-page h2:not(:first-child), .project-page-return {
+			margin-top: $xxxl;
+	}
+
+h2:last-child {
+	margin-bottom: $large;
 }
 
 @media (max-width: $medium-breakpoint) {
@@ -110,15 +120,12 @@ h2:not(:last-child) {
 	// }
 }
 
-* {
-	font-family: 'Ubuntu Mono', monospace;
-	color: #839496;
-}
-
 p {
-  font-family: 'Ubuntu', sans-serif;
-	font-size: $font-large;
-	line-height: 1.5;
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: $font-xl;
+	line-height: 1.75;
+	margin-top: $small;
+		color: #839496;
 }
 
 @media (max-width: $small-breakpoint) {
@@ -134,30 +141,42 @@ p {
 }
 
 p + p {
-  margin-top: .75em;
+  margin-top: $small;
 }
 
 .content-container :not(h2):not(a) {
 	margin-left: $xxl;
 }
 
-.content-image {
-	display: flex;
+.project-image {
 	width: 560px;
-	margin-top: 20px;
-	margin-bottom: 30px;
+	margin-top: $small;
+	@media (max-width: $medium-breakpoint) {
+		// .content-image {
+		// 	width: 750px;
+		// }
+	}
 }
 
-@media (max-width: $medium-breakpoint) {
-	// .content-image {
-	// 	width: 750px;
-	// }
-}
-
-.content-video {
+.project-video {
 	display: flex;
 	margin-top: 20px;
 	margin-bottom: 30px;
+	@media (max-width: $medium-breakpoint) {
+		// .content-image {
+		// 	width: 750px;
+		// }
+	}
+}
+
+.bio-image {
+	width: 400px;
+	margin-top: $small;
+	@media (max-width: $medium-breakpoint) {
+		// .content-image {
+		// 	width: 750px;
+		// }
+	}
 }
 
 /* Link styling */
