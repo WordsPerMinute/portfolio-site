@@ -4,12 +4,6 @@
 @import '_sizes.scss';
 @import '_typography.scss';
 
-
-:root {
-	--body-font-size: 2rem;
-}
-
-
 /* The PATH Terminal style at the top */
 #username {
 	color: #cb4b16;
@@ -21,6 +15,10 @@
 
 
 /* Set up page containers */
+*	{
+	box-sizing: border-box;
+}
+
 main, header, footer {
 	margin: 0;
 	padding: $baseline;
@@ -34,38 +32,47 @@ body {
 
 @media (max-width: $medium-breakpoint) {
 	body {
-		font-size: calc(var(--body-font-size) * 2)
+		font-size: $font-xxxxl;
 	}
 }
 
-.flex-container {
+.body-wrapper {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 }
 
-.header-wrapper {
+.sections-container {
 	display: flex;
-	flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h1 {
+	min-width: 800px;
 }
 
 .main-wrapper {
-	display: flex;
-	flex-direction: column;
+	max-width: 700px;
 }
 
-#content-container {
-	display: flex;
-	flex-direction: column;
-	width: 450px;
+// .header-wrapper {
+// 	display: flex;
+// 	flex-direction: column;
+// }
+//
+// .main-wrapper {
+// 	display: flex;
+// 	flex-direction: column;
+// }
 
+.main-wrapper {
 	/* The styled terminal arrows */
 	h2::before {
 		content: '=>';
-		position: absolute;
-		left: $baseline;
+		position: relative;
+		left: -$large;
 		color: #839496;
 	}
-
 }
 
 
@@ -77,9 +84,7 @@ h1 {
 }
 
 @media (max-width: $small-breakpoint) {
-	#content-container {
-		width: 100%;
-	}
+
 }
 
 h1 > * {
@@ -87,21 +92,22 @@ h1 > * {
 }
 
 h2 {
+	margin-left: $large;
 	color: #839496;
 }
 
 h2:not(:last-child) {
-	margin-bottom: .5em;
+	margin-bottom: $xs;
 }
 
 @media (max-width: $medium-breakpoint) {
-	h2:not(:last-child) {
-		margin-bottom: 1.5em;
-	}
-
-	h2 + p {
-		margin-top: -1.5em;
-	}
+	// h2:not(:last-child) {
+	// 	margin-bottom: $large;
+	// }
+	//
+	// h2 + p {
+	// 	margin-top: -$large;
+	// }
 }
 
 * {
@@ -114,18 +120,24 @@ p {
 	font-size: $font-large;
 }
 
+@media (max-width: $small-breakpoint) {
+	// p {
+	// 	font-size: $font-xl;
+	// }
+}
+
 @media (max-width: $medium-breakpoint) {
-	p {
-		font-size: $font-xl;
-	}
+	// p {
+	// 	font-size: $font-xl;
+	// }
 }
 
 p + p {
   margin-top: .75em;
 }
 
-.main-wrapper {
-	margin-left: 1.5em;
+.content-container :not(h2) {
+	margin-left: $xxl;
 }
 
 .content-image {
@@ -136,9 +148,9 @@ p + p {
 }
 
 @media (max-width: $medium-breakpoint) {
-	.content-image {
-		width: 750px;
-	}
+	// .content-image {
+	// 	width: 750px;
+	// }
 }
 
 .content-video {
@@ -164,11 +176,11 @@ a:hover {
 
 /* FOOTER */
 #no-copy {
-	width: 6px;
+	width: $xxs;
 }
 
 footer {
-	font-size: .5rem;
+	font-size: $xs;
 }
 
 .footer-text {
@@ -189,7 +201,6 @@ footer {
   from, to { border-color: transparent }
   50% { border-color: #839496; }
 }
-/* END typewriter for TITLE */
 
 /* START appear for BODY */
 .main-wrapper {
@@ -209,4 +220,3 @@ footer {
 		opacity: 1;
   }
 }
-/* END appear for BODY */
