@@ -118,6 +118,7 @@ h2:not(:last-child) {
 p {
   font-family: 'Ubuntu', sans-serif;
 	font-size: $font-large;
+	line-height: 1.5;
 }
 
 @media (max-width: $small-breakpoint) {
@@ -136,7 +137,7 @@ p + p {
   margin-top: .75em;
 }
 
-.content-container :not(h2) {
+.content-container :not(h2):not(a) {
 	margin-left: $xxl;
 }
 

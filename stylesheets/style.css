@@ -115,12 +115,13 @@ h2:not(:last-child) {
 
 p {
 		font-family: 'Ubuntu', sans-serif;
-		font-size: 18px; }
+		font-size: 18px;
+		line-height: 1.5; }
 
 p + p {
 		margin-top: .75em; }
 
-.content-container :not(h2) {
+.content-container :not(h2):not(a) {
 		margin-left: 48px; }
 
 .content-image {
