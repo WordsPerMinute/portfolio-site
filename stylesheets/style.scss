@@ -25,6 +25,9 @@ main, header, footer {
 
 header {
 	margin: $xl $baseline 0;
+	@media (max-width: $small-breakpoint) {
+		margin-top: $baseline;
+	}
 }
 
 main {
@@ -51,7 +54,7 @@ body {
 		min-width: 600px;
 	}
 	@media (max-width: $small-breakpoint) {
-		min-width: 350px;
+		min-width: 300px;
 	}
 }
 
@@ -64,7 +67,8 @@ body {
 	h2::before {
 		content: '=>';
 		position: relative;
-		left: -$large;
+		// although the fat arrows align with the title, to the eye it looks like they don't, the extra 2 px helps offset that
+		left: (-$large + 2px);
 		color: #839496;
 	}
 }
@@ -82,8 +86,8 @@ h1 {
 		min-width: 550px;
 	}
 	@media (max-width: $small-breakpoint) {
-		font-size: $font-large;
-		min-width: 350px;
+		font-size: $font-baseline;
+		min-width: 300px;
 	}
 }
 
@@ -102,8 +106,16 @@ h2 {
 	font-size: $font-xxl;
 	margin-left: $large;
 	margin-top: $xl;
+	&:last-child {
+		margin-bottom: $xl;
+	}
 	@media (max-width: $medium-breakpoint) {
 		font-size: $font-xxl;
+	}
+	@media (max-width: $small-breakpoint) {
+		&:first-child {
+			margin-top: $xl;
+		}
 	}
 }
 
@@ -111,35 +123,21 @@ h2 {
 			margin-top: $xxxl;
 	}
 
-h2:last-child {
-	margin-bottom: $large;
-}
-
-@media (max-width: $medium-breakpoint) {
-	h2:not(:last-child) {
-		margin-bottom: $large;
-	}
-
-	h2 + p {
-		margin-top: -$large;
-	}
-}
-
 p {
 	font-family: 'Ubuntu Mono', monospace;
 	font-size: $font-xl;
 	line-height: 1.75;
-	margin-top: $small;
+	margin-top: $xxs;
 	color: #839496;
+	& + p {
+		  margin-top: $small;
+	}
 	@media (max-width: $medium-breakpoint) {
+		max-width: 625px;
 	}
 	@media (max-width: $small-breakpoint) {
 	font-size: $font-baseline;
 	}
-}
-
-p + p {
-  margin-top: $small;
 }
 
 .content-container :not(h2):not(a) {

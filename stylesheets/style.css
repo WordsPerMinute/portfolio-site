@@ -62,6 +62,9 @@ main, header, footer {
 
 header {
 		margin: 32px 16px 0; }
+		@media (max-width: 600px) {
+				header {
+						margin-top: 16px; } }
 
 main {
 		margin: 0 16px; }
@@ -84,7 +87,7 @@ body {
 						min-width: 600px; } }
 		@media (max-width: 600px) {
 				.sections-container {
-						min-width: 350px; } }
+						min-width: 300px; } }
 
 .main-wrapper {
 		max-width: 800px; }
@@ -94,7 +97,7 @@ body {
 		.main-wrapper h2::before {
 				content: '=>';
 				position: relative;
-				left: -24px;
+				left: -22px;
 				color: #839496; }
 
 /* Text */
@@ -110,8 +113,8 @@ h1 {
 						min-width: 550px; } }
 		@media (max-width: 600px) {
 				h1 {
-						font-size: 18px;
-						min-width: 350px; } }
+						font-size: 16px;
+						min-width: 300px; } }
 
 h1 > * {
 		font-family: 'Ubuntu Mono', monospace;
@@ -126,34 +129,32 @@ h2 {
 		font-size: 24px;
 		margin-left: 24px;
 		margin-top: 32px; }
+		h2:last-child {
+				margin-bottom: 32px; }
 		@media (max-width: 950px) {
 				h2 {
 						font-size: 24px; } }
+		@media (max-width: 600px) {
+				h2:first-child {
+						margin-top: 32px; } }
 
 .project-page h2:not(:first-child), .project-page-return {
 		margin-top: 64px; }
-
-h2:last-child {
-		margin-bottom: 24px; }
-
-@media (max-width: 950px) {
-		h2:not(:last-child) {
-				margin-bottom: 24px; }
-		h2 + p {
-				margin-top: -24px; } }
 
 p {
 		font-family: 'Ubuntu Mono', monospace;
 		font-size: 20px;
 		line-height: 1.75;
-		margin-top: 12px;
+		margin-top: 4px;
 		color: #839496; }
+		p + p {
+				margin-top: 12px; }
+		@media (max-width: 950px) {
+				p {
+						max-width: 625px; } }
 		@media (max-width: 600px) {
 				p {
 						font-size: 16px; } }
-
-p + p {
-		margin-top: 12px; }
 
 .content-container :not(h2):not(a) {
 		margin-left: 48px; }
