@@ -42,15 +42,17 @@ body {
 	// overflow: hidden;
 }
 
-// .header-wrapper {
-// 	width: 1000px;
-// }
-
 .sections-container {
 	display: flex;
   flex-direction: column;
   align-items: flex-start;
 	min-width: 1000px;
+	@media (max-width: $medium-breakpoint) {
+		min-width: 600px;
+	}
+	@media (max-width: $small-breakpoint) {
+		min-width: 350px;
+	}
 }
 
 .main-wrapper {
@@ -76,11 +78,11 @@ h1 {
   font-family: $title-font;
 	min-width: 800px;
 	@media (max-width: $medium-breakpoint) {
-		font-size: $font-xl;
+		font-size: $font-xxl;
 		min-width: 550px;
 	}
 	@media (max-width: $small-breakpoint) {
-		font-size: $font-xs;
+		font-size: $font-large;
 		min-width: 350px;
 	}
 }
